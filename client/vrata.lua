@@ -10,8 +10,8 @@ local pozoviClient = TriggerEvent
 local RNE = RegisterNetEvent
 local AEH = AddEventHandler
 
-RNE("sGlavna:vault")
-AEH("sGlavna:vault", function()
+RNE("esxGlavna:vault")
+AEH("esxGlavna:vault", function()
 	local obj = GetClosestObjectOfType(253.92, 224.56, 101.88, 2.0, GetHashKey("v_ilev_bk_vaultdoor"), false, false, false)
     local count = 0
 
@@ -38,8 +38,8 @@ AEH("sGlavna:vault", function()
     FreezeEntityPosition(obj, true)
 end)
 
-RNE("sGlavna:vaultReset")
-AEH("sGlavna:vaultReset", function()
+RNE("esxGlavna:vaultReset")
+AEH("esxGlavna:vaultReset", function()
 	local obj = GetClosestObjectOfType(253.92, 224.56, 101.88, 2.0, GetHashKey("v_ilev_bk_vaultdoor"), false, false, false)
     local brojka = 1100
 
