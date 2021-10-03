@@ -6,6 +6,7 @@ Potrebne skripte
  - cd_keymaster (https://github.com/dsheedes/cd_keymaster)
  - qtarget (https://github.com/QuantusRP/qtarget)
  - rprogress (https://github.com/Mobius1/rprogress)
+ - mka-lasers (zahvaljujem se ajnaletstae (kici) na konfiguraciji lasera) - https://github.com/mkafrin/mka-lasers
  - Zeljena doorlock skripta, u ovom slucaju koristen je np edit tj sDoorlock
 
 KASTM MINIGEJMOVI
