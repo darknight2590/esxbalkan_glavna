@@ -398,8 +398,8 @@ AEH('esxGlavna:ormaricUpperVault', function()
                 pozoviServer('esxGlavna:ormaric:nagrada', source)
                 SetResourceKvp('ormaric1', 'izbusen')
             else
-                pozoviServer('esxGlavna:ormaric:nagrada', source)
-                --SetResourceKvp('ormaric1', 'nijeIzbusen')
+                notifikacija('Niste uspjeli, pokusajte ponovno!')
+                SetResourceKvp('ormaric1', 'nijeIzbusen')
             end
         else
             notifikacija('Potrebna vam je busilica!')
@@ -783,13 +783,14 @@ function izbusiSefove()
                     ClearPedTasks(ped)
                     DeleteObject(bag)
                     DeleteObject(laserDrill)
-                    pozoviServer('esxGlavna:sefoviNagrada')
-                    SetResourceKvp('sefoviLootani', 'jesu')
+                    notifikacija('Neuspjesno, pokusajte ponovo!')
+
+                    SetResourceKvp('sefoviLootani', 'nisu')
 
                 end
             end)
         else
-            ESX.ShowNotification(Strings['need_item'] .. itemLabel)
+            notifikacija('Potrebna vam je busilica!')
         end
     end, 'water')
 end
@@ -1095,8 +1096,7 @@ function hakovanje(kordinatePanela)
     Citizen.Wait(2000)
 
     TriggerEvent('open:minigame', function(uspjesno) 
-        local debug = true
-		if debug then
+		if uspjesno then
             if brojPanela == 1 then
                 notifikacija('Hakovanje uspjesno, nastavite!')
                 pozoviClient('sierra-doorlock:client:setState', 31, false) 
